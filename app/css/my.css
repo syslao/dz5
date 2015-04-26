@@ -1,0 +1,267 @@
+.dynamic-container-header {
+    padding: 25px 24px 22px 26px;
+    margin-bottom: 34px;
+}
+
+.dynamic-container-body {
+    padding-left: 21px;
+    padding-bottom: 23px;
+}
+
+.mysite {
+    list-style: none;
+}
+
+.mysite .mysite-item {
+    float: left;
+    width: 183px;
+    margin-right: 30px;
+    margin-bottom: 42px;
+    text-align: center;
+}
+
+.dynamic-container-body ul li:nth-child(3n+3) {
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+
+.mysite-item .mysite-prev {
+    display: block;
+    text-decoration: none;
+    margin-bottom: 8px;
+}
+
+.mysite-prev .mysite-img-wrapper {
+    position: relative;
+    width: 181px;
+    height: 128px;
+    margin-bottom: 9px;
+    overflow: hidden;
+}
+
+.mysite-img-wrapper .mysite-img {
+    width: 100%;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 2px solid #3ba8c0;
+}
+
+.mysite-img-wrapper .mysite-hover {
+    position: absolute;
+    bottom: 0;
+    transition: all 0.3s ease;
+    opacity: 0;
+    background: rgb(65, 145, 187);
+    background: rgba(65, 145, 187, 0.7);
+    width: 178px;
+    margin-left: 2px;
+    padding-top: 60px;
+    height: 126px;
+}
+
+.mysite-hover .mysite-hover-text {
+    border: 2px solid #fff;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    padding: 0 2px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.mysite-img-wrapper:hover .mysite-hover {
+    opacity: 1;
+}
+
+.mysite-prev .mysite-title {
+    font-family: "fira_sanslight_italic";
+    font-size: 13px;
+    color: #3ba8c0;
+}
+
+.mysite-item .mysite-desc {
+    width: 175px;
+    margin: 0 auto;
+}
+
+.mysite-img-wrapper.add-site {
+    border: 1px dashed #3ba8c0;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background: url("../img/hills.png") center 34px no-repeat;
+    padding-top: 77px;
+    text-decoration: none;
+    color: #3ba8c0;
+    font-size: 13px;
+}
+
+.popup-window {
+    position: relative;
+    margin: 0 auto;
+    width: 362px;
+    display: none;
+}
+
+.add-site-window {
+    /*display: none;*/
+    
+    position: relative;
+    width: 362px;
+    height: 493px;
+    margin: 0 auto;
+    margin-top: 4%;
+    background: #eff3f7;
+    overflow: hidden;
+    z-index: 999;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.window-header {
+    position: relative;
+    padding-left: 14px;
+    padding-top: 16px;
+    margin-bottom: 11px;
+    height: 53px;
+    background: #48cbe8;
+    border-bottom: 9px solid #67dffa;
+}
+
+.window-header .window-title {
+    color: #fff;
+    font-size: 25px;
+    font-family: "fira_sansregular";
+}
+
+.window-header .close-window {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    width: 25px;
+    height: 25px;
+    background: url("../img/close.png") no-repeat;
+}
+
+.window-body {
+    width: 320px;
+    margin: 0 auto;
+    font-size: 17px;
+    overflow: hidden;
+}
+
+.upload-wrap {
+    position: relative;
+}
+
+.input-wrap {
+    position: relative
+}
+
+.send-file {
+    background: #48cbe8 url("../img/cloud.png") center center no-repeat;
+    height: 38px;
+    width: 51px;
+    outline: none;
+    border: 0;
+    float: right;
+    position: absolute;
+    right: 0;
+}
+
+.file-input-text {
+    width: 272px;
+    margin: 0;
+    background: #fff;
+    color: #48cbe8;
+    border: 1px solid #48cbe8;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    padding: 7px 8px;
+    padding-top: 8px;
+    font-family: "fira_sanslight";
+    font-size: 13px;
+}
+
+.form-input[type="file"] {
+    width: 318px;
+    position: absolute;
+    top: 0;
+    opacity: -1;
+    filter: alpha(opacity=0);
+    z-index: 99999;
+    cursor: pointer;
+}
+
+.form-part {
+    margin-bottom: 12px;
+}
+
+.window-body .form-label {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.window-body .form-input {
+    display: block;
+    width: 100%;
+    color: #48cbe8;
+    border: 1px solid #48cbe8;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    padding: 9px 8px;
+    font-family: "fira_sanslight";
+    font-size: 13px;
+}
+
+.window-body .form-input:focus {
+    outline: none;
+}
+
+.window-body .form-input.form-submit {
+    width: 140px;
+    height: 33px;
+    background: #48cbe8;
+    color: #fff;
+    margin: 0 auto;
+    border: 0;
+    border-bottom: 3px solid #3ba8c0;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    padding-top: 3px;
+    font-size: 19px;
+    font-family: "fira_sansbook"
+}
+
+.window-body .form-input::-webkit-input-placeholder {
+    color: #3ba8c0;
+}
+
+.window-body .form-input::-moz-placeholder {
+    color: #3ba8c0;
+}
+
+.window-body .form-input:-moz-placeholder {
+    color: #3ba8c0;
+}
+
+.window-body .form-input:-ms-input-placeholder {
+    color: #3ba8c0;
+}
+
+.popup-window {
+    position: relative;
+    margin: 0 auto;
+    width: 362px;
+    display: none;
+}

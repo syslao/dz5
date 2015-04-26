@@ -1,0 +1,124 @@
+.dynamic-container-body {
+    padding-bottom: 20px;
+}
+
+.dynamic-container-header {
+    display: block;
+    padding-top: 55px;
+    background: #48cbe8;
+    border-bottom: 17px solid #67dffa;
+    height: 138px;
+    font-size: 27px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 49px;
+}
+
+.form-row {
+    width: 402px;
+    margin: 0 auto;
+    margin-bottom: 17px;
+    overflow: hidden;
+}
+.form-row.last {
+    margin-bottom: 35px;
+}
+
+
+.form-item {
+    float: left;
+    width: 192px;
+}
+
+.form-item.right,
+.form-item.buttons-col.right {
+    float: right;
+    margin-right: 0;
+}
+
+.form-item.right-code {
+float: right;
+    margin-right: 0;
+    margin-top: 15px;
+}
+
+.cont-form-label {
+    font-family: "fira_sanslight";
+    font-size: 19px;
+    display: block;
+    width: 100%;
+    margin-bottom: 2px;
+}
+
+.contacts-form-input {
+    border: 1px solid #48cbe8;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    outline: none;
+    height: 41px;
+    font-family: "fira_sanslight";
+    font-size: 13px;
+    color: #48cbe8;
+    width: 100%;
+    padding-left: 10px;
+    padding-top: 3px;
+}
+
+textarea.contacts-form-input {
+    height: 182px;
+    padding-top: 12px;
+}
+
+.captcha {
+    height: 77px;
+    width: 189px;
+    float: left;
+    background: url(../img/code.png) no-repeat;
+}
+
+.form-item.buttons-col {
+    float: left;
+    width: 140px;
+}
+
+.form-button {
+    width: 140px;
+    height: 33px;
+    border: 0;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    font-family: "fira_sansbook";
+    font-size: 19px;
+    color: #fff;
+}
+
+.form-button#submit {
+    background: #48cbe8;
+    border-bottom: 2px solid #3ba8c0;
+}
+
+.form-button#reset {
+    background: #849db5;
+    border-bottom: 2px solid #687b8f;
+}
+
+.contacts-form-input::-webkit-input-placeholder {
+    color: #48cbe8;
+}
+
+.contacts-form-input::-moz-placeholder {
+    color: #48cbe8;
+}
+
+.contacts-form-input:-moz-placeholder {
+    color: #48cbe8;
+}
+
+.contacts-form-input:-ms-input-placeholder {
+    color: #48cbe8;
+}
+.form-row.last .cont-form-label {
+    font-size: 17px;
+}
