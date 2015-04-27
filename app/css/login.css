@@ -57,8 +57,6 @@
     font-size: 17px;
 }
 
-.login-form-input:focus {}
-
 .login-form-input#submit {
     width: 226px;
     height: 54px;
