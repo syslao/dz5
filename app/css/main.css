@@ -36,14 +36,12 @@ body {
     margin: 0 auto;
     position: relative;
 }
-/*logo*/
 
 .logo-link {
     position: absolute;
     top: 39px;
     left: 0;
 }
-/*social*/
 
 .social-buttons {
     position: absolute;
