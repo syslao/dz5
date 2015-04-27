@@ -46,6 +46,11 @@
     float: left;
 }
 
+.about-info-item .about-info-item-content {
+    float: left;
+    max-width: 200px;
+}
+
 .about-info-item-content .skills {
     display: inline-block;
     list-style: none;
