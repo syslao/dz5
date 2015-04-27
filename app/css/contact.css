@@ -74,9 +74,7 @@ textarea.contacts-form-input {
     height: 77px;
     width: 189px;
     float: left;
-    border: 1px solid #48cbe8;
     background: url(../img/code.png) no-repeat;
-
 }
 
 .form-item.buttons-col {
