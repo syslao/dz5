@@ -20,9 +20,13 @@
     text-align: center;
 }
 
-.dynamic-container-body ul li:nth-child(3n+3) {
+.mysite-item:nth-child(3n+3) {
     margin-right: 0px;
     margin-bottom: 0px;
+}
+
+.mysite-item:nth-child(3n+1) {
+  clear: both;
 }
 
 .mysite-item .mysite-prev {
