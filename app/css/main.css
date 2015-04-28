@@ -162,10 +162,6 @@ body {
     list-style: none;
 }
 
-.nav-list .nav-list-item {
-    height: 73px;
-}
-
 .nav-list-item .nav-list-link {
     display: block;
     font-size: 21px;
@@ -218,7 +214,7 @@ body {
 }
 
 .contacts-list .contacts-list-item {
-    height: 39px;
+    min-height: 39px;
     padding: 11px 0 0 86px;
 }
 
