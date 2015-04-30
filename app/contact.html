@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="bower/normalize.css/normalize.css">
     <link rel="stylesheet" href="fonts/fira/fira.css">
     <link rel="stylesheet" href="fonts/Proxima-Nova/proximanovacond-semibold.css">
+    <link rel="stylesheet" href="bower/qtip2/jquery.qtip.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/contact.css">
     <script src="bower/modernizr/modernizr.js"></script>
@@ -77,14 +78,14 @@
                                     <label class="cont-form-label" for="name">
                                         Имя
                                     </label>
-                                    <input class="contacts-form-input" type="text" name="name" placeholder="Как к вам обращаться">
+                                    <input class="contacts-form-input" type="text" name="name" placeholder="Как к вам обращаться" qtip-content="Вы не ввели имя" qtip-position="left">
                                     </input>
                                 </div>
                                 <div class="form-item right">
                                     <label class="cont-form-label" for="email">
                                         Email
                                     </label>
-                                    <input class="contacts-form-input" type="text" name="email" placeholder="Куда мне писать">
+                                    <input class="contacts-form-input" type="text" name="email" placeholder="Куда мне писать" qtip-content="Вы не ввели e-mail" qtip-position="right">
                                     </input>
                                 </div>
                             </div>
@@ -92,7 +93,7 @@
                                 <label class="cont-form-label" for="message">
                                     Сообщение
                                 </label>
-                                <textarea class="contacts-form-input" name="message" cols="48" rows="10" placeholder="Кратко в чём суть"></textarea>
+                                <textarea class="contacts-form-input" name="message" cols="48" rows="10" placeholder="Вы не ввели сообщение" qtip-content="Вы не ввели имя" qtip-position="left"></textarea>
                             </div>
                             <div class="form-row last">
                                 <label class="cont-form-label" for="code">
@@ -100,7 +101,7 @@
                                 </label>
                                 <div class="captcha"></div>
                                 <div class="form-item right-code">
-                                    <input class="contacts-form-input" type="text" name="code" placeholder="Введите код">
+                                    <input class="contacts-form-input" type="text" name="code" placeholder="Введите код" qtip-content="Вы не ввели код" qtip-position="right">
                                     </input>
                                 </div>
                             </div>
@@ -109,7 +110,7 @@
                                     <input class="form-button" type="submit" name="submit" id="submit" value="Отправить"></input>
                                 </div>
                                 <div class="form-item buttons-col right">
-                                    <button class="form-button" name="reset" id="reset">
+                                    <button class="form-button" type="reset" id="reset">
                                         Очистить
                                     </button>
                                 </div>
@@ -131,6 +132,9 @@
         </div>
     </footer>
     <script src="bower/jquery/dist/jquery.min.js"></script>
+    <script src="bower/qtip2/jquery.qtip.min.js"></script>
+    <script src="bower/jquery-placeholder/jquery.placeholder.min.js"></script>
+    
     <script src="js/main.js"></script>
 </body>
 

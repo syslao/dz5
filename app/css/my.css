@@ -26,7 +26,7 @@
 }
 
 .mysite-item:nth-child(3n+1) {
-  clear: both;
+    clear: both;
 }
 
 .mysite-item .mysite-prev {
@@ -143,7 +143,7 @@
     font-family: "fira_sansregular";
 }
 
-.window-header .close-window {
+.window-header .b-close {
     display: block;
     position: absolute;
     top: 10px;
@@ -268,4 +268,12 @@
     margin: 0 auto;
     width: 362px;
     display: none;
+}
+
+.qtip-mystyle {
+    background-color: #f97e76;
+    border-color: #f97e76;
+    font-family: 'fira_sansbook';
+    color: #ffffff;
+    font-size: 15px;
 }

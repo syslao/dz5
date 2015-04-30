@@ -319,6 +319,21 @@ body {
     text-align: center;
 }
 
+.error-field {
+    border: 1px solid #f97e76;
+    background-color: #fdd5d2;
+}
+
+.qtip-mystyle {
+    background-color: #f97e76;
+    border-color: #f97e76;
+    font-family: 'fira_sansbook';
+    color: #ffffff;
+    font-size: 15px;
+}
+
+
+
 .container:before,
 .clearfix:before,
 .container:after,
