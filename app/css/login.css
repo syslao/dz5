@@ -88,3 +88,12 @@
 .login-form-input:-ms-input-placeholder {
     color: #3ba8c0;
 }
+
+.qtip-mystyle {
+    background-color: #f97e76;
+    border-color: #f97e76;
+    font-family: 'fira_sansbook';
+    color: #ffffff;
+    font-size: 15px;
+}
+

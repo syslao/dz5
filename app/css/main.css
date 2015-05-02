@@ -320,8 +320,8 @@ body {
 }
 
 .error-field {
-    border: 1px solid #f97e76;
-    background-color: #fdd5d2;
+    border: 1px solid #f97e76 !important;
+    background-color: #fdd5d2 !important;
 }
 
 .qtip-mystyle {

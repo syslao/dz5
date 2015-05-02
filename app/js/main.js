@@ -3,7 +3,7 @@
     var app = {
 
         initialize: function() {
-            console.log('Инициализация приложения');
+            // console.log('Инициализация приложения');
 
             this.setUpListeners();
 
@@ -12,14 +12,36 @@
 
         },
         setUpListeners: function() {
-            console.log('Прослушка событий включена');
+            // console.log('Прослушка событий включена');
 
             $('#showpopup').on('click', app.Popup);
             $('form').on('submit', app.showResult);
             $('form').on('keydown', '.error-field', app.removeError);
             $('form').on('reset', app.clearForm);
+            $('form').on('change', 'input[type=file]', app.addupload);
+
+
+            // $('input[type=file]').onchange(function(e){
+            //     $in=$(this);
+            //     $('form').find('input.file-input-text').attr('value', $in.val().replace(/^.*\\/, ""));
+            
+
+            // });
+
+
+
+
+
 
         },
+
+        addupload: function() {
+            $in=$(this);
+            $('form').find('input.file-input-text').attr('value', $in.val().replace(/^.*\\/, ""));
+
+
+        },
+        
 
         Popup: function() {
             $('.popup-window').bPopup({
@@ -40,21 +62,27 @@
         showResult: function(ev) {
             ev.preventDefault();
             var form = $(this);
-            if (app.validateForm($(this))) {
-                console.log('test-good')
-            }
+            if (app.validateForm($(this))) {}
         },
 
         validateForm: function(form) {
-            var elements = form.find('input, textarea').not('input[type="submit"],input#reset, input#submit'),
+            var elements = form.find('input, textarea').not('input[type="submit"], input.img-input, input#reset'),
                 valid = true;
             $.each(elements, function(index, val) {
                 var element = $(val),
                     val = element.val(),
                     position = element.attr('qtip-position');
+                    
 
                 if (val.length === 0) {
                     element.addClass('error-field');
+                    // if (element.hasClass('form-input img-input error-field')) form.find('.file-input-text').addClass('error-field');
+
+                    // if (element.class = 'file-input-text')
+
+
+                    // form.find('.file-input-text').addClass('error-field');
+
                     app.createTooltip(element, position);
                     valid = false;
                 }
