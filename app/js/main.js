@@ -3,45 +3,45 @@
     var app = {
 
         initialize: function() {
-            // console.log('Инициализация приложения');
+
 
             this.setUpListeners();
 
             $('input, textarea').placeholder();
 
 
+            (function() {
+                $('.mysite-item:nth-child(3n)').css("margin-right", "0");
+            })();
+
         },
         setUpListeners: function() {
-            // console.log('Прослушка событий включена');
+
 
             $('#showpopup').on('click', app.Popup);
             $('form').on('submit', app.showResult);
             $('form').on('keydown', '.error-field', app.removeError);
             $('form').on('reset', app.clearForm);
-            $('form').on('change', 'input[type=file]', app.addupload);
+            $('form').on('change', 'input[type=file]', app.adduploadfix);
+            $('form').on('change', '.error-field', app.removeError);
 
 
-            // $('input[type=file]').onchange(function(e){
-            //     $in=$(this);
-            //     $('form').find('input.file-input-text').attr('value', $in.val().replace(/^.*\\/, ""));
-            
+        },
 
-            // });
-
-
-
+        adduploadfix: function() {
+            $in = $(this);
+            var form = $('form'),
+                inputerror = form.find('input#file').attr('value', $in.val());
+            form.find('#file-name').text($in.val().replace(/^.*\\/, ""));
+            inputerror.removeClass('error-field');
+            form.find('input, textarea').trigger('hideTooltip');
+            $('form').on('submit', app.showResult);
+            app.validateForm($('form'))
 
 
 
         },
 
-        addupload: function() {
-            $in=$(this);
-            $('form').find('input.file-input-text').attr('value', $in.val().replace(/^.*\\/, ""));
-
-
-        },
-        
 
         Popup: function() {
             $('.popup-window').bPopup({
@@ -66,24 +66,18 @@
         },
 
         validateForm: function(form) {
-            var elements = form.find('input, textarea').not('input[type="submit"], input.img-input, input#reset'),
+            var elements = form.find('input, textarea').not('input[type="submit"], input#reset'),
                 valid = true;
             $.each(elements, function(index, val) {
                 var element = $(val),
                     val = element.val(),
                     position = element.attr('qtip-position');
-                    
+
 
                 if (val.length === 0) {
                     element.addClass('error-field');
-                    // if (element.hasClass('form-input img-input error-field')) form.find('.file-input-text').addClass('error-field');
-
-                    // if (element.class = 'file-input-text')
-
-
-                    // form.find('.file-input-text').addClass('error-field');
-
                     app.createTooltip(element, position);
+                    app.adduploaderror();
                     valid = false;
                 }
 
@@ -94,11 +88,22 @@
         removeError: function() {
             $(this).removeClass('error-field');
         },
+
+        adduploaderror: function() {
+            var form = $('form')
+            if (form.find('input#file').hasClass('error-field')) {
+                form.find('.file-form-label').addClass('error-field');
+            };
+
+        },
+
         clearForm: function(form) {
             var form = $(this);
 
             form.find('input, textarea').trigger('hideTooltip');
             form.find('.error-field').removeClass('error-field');
+            form.find('input#file').attr('value', "");
+            form.find('#file-name').text("Загрузите изображение");
         },
 
         createTooltip: function(element, position) {
